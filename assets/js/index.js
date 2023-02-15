@@ -1,45 +1,89 @@
 const canvasEl = document.querySelector("canvas"),
-canvasCtx = canvasEl.getContext("2d")
+    canvasCtx = canvasEl.getContext("2d")
+gapX = 10
 
 const lineWidth = 15
+const field = {
+    w: window.innerWidth,
+    h: window.innerHeight,
+    draw: function () {
+        canvasCtx.fillStyle = "#286047"
+        canvasCtx.fillRect(0, 0, this.w, this.h)
+    }
+}
+
+const line = {
+    w: 15,
+    h: field.h,
+    draw: function () {
+        canvasCtx.fillStyle = "#fff"
+        canvasCtx.fillRect(field.w / 2 - this.w / 2, 0, this.w, this.h)
+    }
+}
+
+const leftPaddle = {
+    x: gapX,
+    y: 100,
+    w: line.w,
+    h: 200,
+    draw: function () {
+        canvasCtx.fillStyle = "#fff"
+        canvasCtx.fillRect(this.x, this.y, this.w, this.h)
+    }
+}
+
+const rightPaddle = {
+    x: field.w - lineWidth - gapX,
+    y: 100,
+    w: line.w,
+    h: 200,
+    draw: function () {
+        canvasCtx.fillStyle = "#fff"
+        canvasCtx.fillRect(this.x, this.y, this.w, this.h)
+    }
+}
+
+const score = {
+    human: 1,
+    computer: 2,
+    draw: function () {
+        canvasCtx.font = "bold 72px Arial"
+        canvasCtx.textAlign = "center"
+        canvasCtx.textBaseline = "top"
+        canvasCtx.fillStyle = "#01341D"
+        canvasCtx.fillText(this.human, field.w / 4, 50)
+        canvasCtx.fillText(this.computer, field.w / 4 + field.w / 2, 50)
+    }
+}
+
+const ball = {
+    x: 300,
+    y: 200,
+    r: 20,
+    draw: function () {
+        canvasCtx.fillStyle = "#fff"
+        canvasCtx.beginPath()
+        canvasCtx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false)
+        canvasCtx.fill()
+    }
+}
 
 
 function setup() {
-canvasEl.width = canvasCtx.width = window.innerWidth
-canvasEl.height = canvasCtx.height = window.innerHeight
-
+    canvasEl.width = canvasCtx.width = field.w
+    canvasEl.height = canvasCtx.height = field.h
 }
 
-// desenho do campo
-
 function draw() {
-canvasCtx.fillStyle = "#286047"
-canvasCtx.fillRect(0, 0, window.innerWidth, window.innerHeight)
+    field.draw()
+    line.draw()
 
-// linha central
+    leftPaddle.draw()
+    rightPaddle.draw()
 
-canvasCtx.fillStyle = "#fff"
-canvasCtx.fillRect(window.innerWidth/2 - lineWidth / 2, 0 ,  lineWidth , window.innerHeight)
+    score.draw()
 
-// raquete esquerda
-canvasCtx.fillRect(10, 100, lineWidth, 200)
-
-// raquete direita
-canvasCtx.fillRect(window.innerWidth - lineWidth - 10, 300 ,  lineWidth, 200)
-
-// bolinha
-canvasCtx.beginPath()
-canvasCtx.arc(200, 300, 20, 0, 2 * Math.PI, false)
-canvasCtx.fill()
-
-// placar
-canvasCtx.font = "bold 72px Arial"
-canvasCtx.textAlign = "center"
-canvasCtx.textBaseline = "top"
-canvasCtx.fillStyle = "#01341D"
-canvasCtx.fillText("3",window.innerWidth / 4, 50)
-canvasCtx.fillText("1",window.innerWidth / 4 + window.innerWidth / 2, 50)
-
+    ball.draw()
 }
 
 setup()
