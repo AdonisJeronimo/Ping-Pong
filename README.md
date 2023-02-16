@@ -12,8 +12,7 @@ Obrigado por visitar meu perfil! :0
 ###  Projeto PING-PONG  🚀🚀
 <br>
 
-O projeto PING-PONG tem como proposta desenvolver e aguçar habilidades de lógica de programação. <br>
-
+O projeto PING-PONG tem como proposta desenvolver e aguçar habilidades de lógica de programação.
 <br>Desenvolver jogos de alta ou baixa complexidade é uma excelente forma de melhorarmos nossa programação como um todo, porque é visualmente fácil entender como as coisas funcionam. 
 <br>
 <br>
