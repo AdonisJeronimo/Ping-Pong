@@ -52,6 +52,8 @@ A cada ponto realizado por algum dos jogadores, a velocidade da bolinha será au
 <img height="****" width="***" src="./assets/images/gif-projeto.gif">
   </div>
 
+  https://dulcet-malabi-f5066a.netlify.app/
+
 <br>
 
 #  Futuras implementações
