@@ -45,8 +45,16 @@ const rightPaddle = {
     y: 100,
     w: line.w,
     h: 200,
+    speed:1,
     _move: function () {
-        this.y = ball.y
+        if(this.y + this.h / 2 < ball.y + ball.r){
+            this.y += this.speed
+        }else{
+            this.y -= this.speed
+        }
+    },
+    speedUp: function(){
+        this.speed += 2
     },
     draw: function () {
         canvasCtx.fillStyle = "#fff"
@@ -76,10 +84,10 @@ const score = {
 }
 
 const ball = {
-    x: 0,
-    y: 0,
+    x: 370,
+    y: 120,
     r: 20,
-    speed: 5,
+    speed: 4,
     directionX: 1,
     directionY: 1,
     _calcPosition: function () {
@@ -119,13 +127,20 @@ const ball = {
         }
     },
     _reverseX: function () {
-        this.directionX *= - 1
+        this.directionX *= - 1 
     },
     _reverseY: function () {
-        this.directionY *= - 1
+        this.directionY *= - 1 
     },
 
+    _speedUp: function(){
+        this.speed += 4
+
+    },
     _pointUp: function () {
+        this._speedUp()
+        rightPaddle.speedUp()
+
         this.x = field.w / 2
         this.y = field.h / 2
     },

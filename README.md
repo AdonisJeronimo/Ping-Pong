@@ -1,4 +1,4 @@
-# PING-PONG| ![GitHub]( https://img.shields.io/badge/Status-%20development-orange)
+# PING-PONG| ![GitHub](https://img.shields.io/badge/Status-Finished-green/?style=for-the-badge)
 
 
 ## Seja Bem-vindo(a) !!
@@ -9,11 +9,11 @@ Obrigado por visitar meu perfil! :0
 ###  🚀 Projeto PING-PONG  🚀
 <br>
 
-O projeto PING-PONG tem como proposta desenvolver e aguçar a lógica de programação. Desenvolver jogos de alta ou baixa complexidade é uma exelente forma de melhorarmos nossa programação como um todo, porque é visualmente facil entender como as coisas funcionam.
-Neste projeto em especial, utilizaremos apenas HTML e JavaScript. 
+O projeto PING-PONG tem como proposta desenvolver e aguçar as habilidades de lógica de programação. <br>Desenvolver jogos de alta ou baixa complexidade é uma exelente forma de melhorarmos nossa programação como um todo, porque é visualmente facil entender como as coisas funcionam.<br>
+
 
 <div style="display: inline_block"> <br>
-<img height="****" width="***" src="****">
+<img height="****" width="***" src="./assets/images/gif-projeto.gif">
   </div>
 
 
@@ -30,7 +30,9 @@ Neste projeto em especial, utilizaremos apenas HTML e JavaScript.
 
  &nbsp;&nbsp;&nbsp;&nbsp; ![GitHub top language](https://img.shields.io/github/languages/top/AdonisJeronimo/Ping-Pong?style=plastic)
 
-<!-- ###  Processo de desenvolvimento ⌨️🖱
 
-Foi um desafio rápido de ser feito, pois exige apenas noções básicas de HTML e CSS, sendo assim, seu único e verdadeiro desafio é ser capaz de se atentar aos mínimos detalhes para que esta reprodução seja a mais próximo do original.
-Apenas foram utilizados arquivos de imagens como referência sem a presença de um layout no Figma ou qualquer outra ferramenta que nos possibilitasse ter acesso a as medidas exatas utilizadas neste projeto. -->
+
+
+###  Processo de desenvolvimento ⌨️🖱
+
+Iniciei criando os desenhos do campo, linha central, raquetes, bolinha e placar, fazendo Apos ter uma estrutura basica montada, dei inicio ao processo de criação de objeto  programação orientada objeto
